@@ -4,9 +4,9 @@ const express = require('express')
 const bcrypt = require('bcryptjs')
 const router = express.Router()
 const User = require('../users/users-model')
-//const { checkUsernameFree, checkPasswordLength, checkUsernameExists } = require('./auth-middleware');
+//const { checkUsernameFree } = require('./auth-middleware');
 
-router.post('/register',  async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
   try {
     const { username, password } = req.body
     const newUser = {
